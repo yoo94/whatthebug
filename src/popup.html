@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatTheBug 검색</title>
+  <style>
+    body { font-family: sans-serif; margin: 16px; width: 300px; }
+    #result { margin-top: 16px; }
+    input[type="text"] { width: 100%; padding: 8px; box-sizing: border-box; }
+    button { margin-top: 8px; width: 100%; padding: 8px; }
+  </style>
+</head>
+<body>
+  <h2>에러코드 검색</h2>
+  <input type="text" id="searchInput" placeholder="에러코드 또는 키워드 입력" autofocus />
+  <button id="searchBtn">검색</button>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

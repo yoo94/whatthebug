@@ -1,0 +1,12 @@
+{
+  "name": "whatthebug",
+  "version": "1.0.0",
+  "description": "개발하면서 발생하는 에러코드 검색",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "yoo94",
+  "license": "ISC"
+}
