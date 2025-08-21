@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "build": "webpack"
+    "build": "webpack",
+    "zip": "zip -r whatthebug-extension.zip build/"
   },
   "keywords": [],
   "author": "yoo94",
