@@ -36,7 +36,7 @@ const aliasMap = {
 
 async function loadData() {
   try {
-    const res = await fetch(chrome.runtime.getURL('public/error.json'));
+    const res = await fetch('error.json');
     if (!res.ok) throw new Error('failed to load error.json');
     errorData = await res.json();
   } catch (e) {
@@ -77,9 +77,12 @@ function renderResult(item) {
     renderMessage('검색 결과가 없습니다.');
     return;
   }
+
+  const subtitleHtml = item.subtitle ? `<div style="margin-top:2px; color:#000000; font-style:italic;">${escapeHtml(item.subtitle)}</div>` : '';
+
   resultDiv.innerHTML = `
     <div style="line-height:1.4">
-      <div><strong>코드</strong>: ${item.title}</div>
+      <div><strong>코드</strong>: ${item.title}${subtitleHtml}</div>
       <div style="margin-top:6px"><strong>설명</strong>: ${escapeHtml(item.reason)}</div>
       <div style="margin-top:6px"><strong>대처</strong>: ${escapeHtml(item.solve)}</div>
     </div>

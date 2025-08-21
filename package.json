@@ -4,9 +4,15 @@
   "description": "개발하면서 발생하는 에러코드 검색",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "yoo94",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^13.0.1",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  }
 }
